@@ -18,7 +18,7 @@ export default function Register() {
       name: "",
       email: "",
       password: "",
-      role: 1,
+      isAdmin: 1,
     },
     validationSchema: formValidationSchema,
     onSubmit: async (values) => {
@@ -104,11 +104,11 @@ export default function Register() {
             label="Role"
             variant="outlined"
             className="signin-input"
-            value={formik.values.role}
+            value={formik.values.isAdmin}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             type="number"
-            name="role"
+            name="isAdmin"
           />
           <br />
           <br />
