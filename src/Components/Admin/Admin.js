@@ -18,7 +18,7 @@ const Admin = () => {
           <Button color="inherit" onClick={() => navigate("/order/list")}>
             &nbsp; Orders List
           </Button>
-          <div className="fa-solid box">
+          <div >
             <Button color="inherit" onClick={() => navigate("/signin")}>
               Log out
             </Button>
