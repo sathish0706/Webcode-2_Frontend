@@ -33,7 +33,7 @@ function Signin({ setLoginUser }) {
         if (response.data.msg === "Succesful login...") {
           navigate("/");
         }
-        if (response.data.currentUser.isAdmin === 0) {
+        if (response.data.currentUser.role === 0) {
           navigate("/admin");
         }
       } catch (err) {
