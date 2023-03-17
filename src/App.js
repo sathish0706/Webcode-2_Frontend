@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       {loginUser.msg === "Succesful login..." &&
-      loginUser.currentUser.isAdmin === 1 ? (
+      loginUser.currentUser.role === 1 ? (
         <Topbar count={cartCount} />
       ) : null}
 
