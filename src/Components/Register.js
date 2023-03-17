@@ -18,7 +18,7 @@ export default function Register() {
       name: "",
       email: "",
       password: "",
-      role: 1,
+      role: 0,
     },
     validationSchema: formValidationSchema,
     onSubmit: async (values) => {
