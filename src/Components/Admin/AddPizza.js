@@ -18,7 +18,6 @@ const formValidationSchema = yup.object({
 });
 
 export default function AddPizza() {
-  const [add, setAdd] = useState(true);
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -29,15 +28,14 @@ export default function AddPizza() {
     },
     validationSchema: formValidationSchema,
     onSubmit: async (newPizza) => {
-      navigate("/pizza");
 
       try {
         const response = await axios.post(
           `${process.env.REACT_APP_URL}/pizza/addpizza`,
           newPizza
         );
-        // localStorage.setItem("myreact", response.data.token)
         console.log(response);
+         navigate("/admin/pizzaPage");
       } catch (err) {
         console.log(err);
       }
@@ -47,7 +45,6 @@ export default function AddPizza() {
   return (
     <>
       <Admin />
-      {add ? (
         <div className="add-pizza-container">
           <form onSubmit={formik.handleSubmit}>
             <TextField
@@ -131,15 +128,12 @@ export default function AddPizza() {
               type="sunmit"
               color="success"
               className="signin-button"
-              onClick={() => setAdd(!add)}
             >
               Add Pizza
             </Button>
           </form>
         </div>
-      ) : (
-        <h1 className="box">Successfully Add Pizza</h1>
-      )}
+      
     </>
   );
 }
