@@ -35,7 +35,7 @@ export default function AddPizza() {
           newPizza
         );
         console.log(response);
-         navigate("/admin/pizzaPage");
+         navigate("/admin");
       } catch (err) {
         console.log(err);
       }
