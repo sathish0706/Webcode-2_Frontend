@@ -18,6 +18,9 @@ const Admin = () => {
           <Button color="inherit" onClick={() => navigate("/order/list")}>
             &nbsp; Orders List
           </Button>
+         <Button color="inherit" onClick={() => navigate("/admin/pizzaPage")}>
+            &nbsp; Pizza's
+          </Button>
           <div >
             <Button color="inherit" onClick={() => navigate("/signin")}>
               Log out
