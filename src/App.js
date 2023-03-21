@@ -11,6 +11,7 @@ import AddPizza from "./Components/Admin/AddPizza";
 import Admin from "./Components/Admin/Admin";
 import OrderList from "./Components/Admin/OrderList";
 import useUsers from "./Hook/useUsers";
+import AdminPizza from "./Components/Admin/AdminPizza";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -18,7 +19,6 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const [pizzaData, setPizzaData] = useState([]);
   const [user, setUser] = useUsers("");
-  console.log(process.env.REACT_APP_URL);
 
   return (
     <div className="App">
@@ -64,6 +64,12 @@ function App() {
         <Route
           path="/add-pizza"
           element={<AddPizza setPizzaData={setPizzaData} />}
+        />
+       <Route
+          path="/admin/pizzaPage"
+          element={
+            <AdminPizza pizzaData={pizzaData} setPizzaData={setPizzaData} />
+          }
         />
 
         <Route
