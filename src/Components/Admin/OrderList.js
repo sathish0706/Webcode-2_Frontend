@@ -27,6 +27,7 @@ const OrderList = () => {
             <TableRow>
               <TableCell align="left">Name</TableCell>
               <TableCell align="center">Email</TableCell>
+              <TableCell align="center">Order Time</TableCell>
               <TableCell align="right">Address</TableCell>
             </TableRow>
           </TableHead>
@@ -44,7 +45,9 @@ const OrderList = () => {
                         <TableCell align="center">
                           <b>{order.email}</b>
                         </TableCell>
-
+                       <TableCell align="center">
+                          <b>{order.createdAt}</b>
+                        </TableCell>
                         <TableCell align="right">
                           <b>{order.address}</b>
                         </TableCell>
