@@ -66,7 +66,7 @@ function App() {
           element={<AddPizza setPizzaData={setPizzaData} />}
         />
        <Route
-          path="/admin"
+          path="/admin/pizzaPage"
           element={
             <AdminPizza pizzaData={pizzaData} setPizzaData={setPizzaData} />
           }
