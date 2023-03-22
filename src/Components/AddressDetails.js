@@ -26,7 +26,7 @@ const AddressDetails = ({ totalAmount }) => {
 
       try {
         const response = await axios.post(
-          "http://localhost:4001/api/order",
+          "https://webcode-2-dsjx.onrender.com/api/order",
           values
         );
         // localStorage.setItem("myreact", response.data.token)
