@@ -34,7 +34,7 @@ function Signin({ setLoginUser }) {
           navigate("/");
         }
         if (response.data.currentUser.role === 0) {
-          navigate("/admin");
+          navigate("/admin/pizzaPage");
         }
       } catch (err) {
         console.log(err);
